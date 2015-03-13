@@ -1,0 +1,74 @@
+package nyc.c4q.m47bell;
+/****** Please ignore this file.........................
+/*
+*Access Code 2-1
+*Marbella Vidals
+*Adventure game
+*March 7, 2015
+ */
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //the answer of the game
+        String answer = "Hello";
+
+        //response if user wants to play
+        String responsePlay;
+
+
+        //the number of letters in the answer
+        int numOfLetters = 5;
+
+        //the letter the user will guess
+        String guess;
+
+        //number of rounds to play
+        int count = 0;
+
+        Scanner input = new Scanner(System.in);
+
+        //print out game objective
+        System.out.println("The objective of this game is to guess " +
+                "this word by entering the correct letters in five rounds \n");
+
+        //prompt user if they would like to play
+        System.out.println("Would you like to play? (Y/N)");
+
+        //save/retrieve response if they want to play
+        responsePlay = input.nextLine();
+
+        //decides whether to proceed with the game or not
+
+        while (((responsePlay.equalsIgnoreCase("Y")||(responsePlay.equalsIgnoreCase("yes"))) && count < 5)){
+
+            System.out.println("Great, let's play!");
+
+            //print out the number of letters in the game
+            System.out.println(" This word has " + numOfLetters + " letters.\n");
+
+
+            //insert a second loop
+
+            //first guess
+            System.out.println("Round: " + count + "\nEnter a letter: ");
+
+            guess = input.nextLine();
+            count++;
+
+            if (guess.equalsIgnoreCase("h") ||guess.equalsIgnoreCase("e")||guess.equalsIgnoreCase("l")
+                    ||guess.equalsIgnoreCase("l")||guess.equalsIgnoreCase("o")){
+
+                System.out.print("You guessed " + guess+ "."+" Great, you're on the right track!");
+
+            }
+            else {System.out.println("Oops..Try again");}
+
+        }
+             System.out.println(" Okay, Good Bye.");
+
+
+
+    }
+}
